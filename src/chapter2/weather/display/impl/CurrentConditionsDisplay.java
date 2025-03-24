@@ -7,7 +7,7 @@ import chapter2.weather.display.Observer;
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
     private float temperature;
     private float humidity;
-    private WeatherData weatherData;
+    private final WeatherData weatherData;
 
     public CurrentConditionsDisplay(WeatherData weatherData) {
         this.weatherData = weatherData;
@@ -21,9 +21,9 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
     }
 
     @Override
-    public void update(float temp, float humidity, float pressure) {
-        this.temperature = temp;
-        this.humidity = humidity;
+    public void update() {
+        this.temperature = weatherData.getTemperature();
+        this.humidity = weatherData.getHumidity();
         display();
 
     }
