@@ -1,9 +1,12 @@
 package chapter3;
 
+import static chapter3.Size.TALL;
+
 public class Espresso extends Beverage {
 
-    public Espresso() {
-        description = "Espresso";
+    public Espresso(Size size) {
+        super.size = size;
+        super.description = "Espresso";
     }
 
     @Override
