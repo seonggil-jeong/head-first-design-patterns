@@ -49,7 +49,7 @@
 
 ```java
 public interface PizzaIngredientFactory {
-    
+
     Dough createDough();
 
     Sauce createSauce();
@@ -66,5 +66,7 @@ public interface PizzaIngredientFactory {
 
 즉, 팩토리 메서드 패턴은 객체 생성을 위임하는 것이고, 추상 팩토리 패턴은 객체 생성을 위한 인터페이스를 제공하는 것이다.
 
+## Chapter5 - Singleton Pattern
 
+> 어떤 클래스가 최대 한 개의 인스턴스만을 갖도록 보장하고, 이 인스턴스에 전역 접근을 제공
 
