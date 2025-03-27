@@ -1,10 +1,8 @@
-package chapter3;
-
-import static chapter3.Size.TALL;
+package chapter3.coffee;
 
 public abstract class Beverage {
     String description = "Unknown Beverage";
-    Size size = TALL;
+    Size size = Size.TALL;
 
 
     public Size getSize() {

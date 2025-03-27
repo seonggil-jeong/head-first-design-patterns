@@ -1,6 +1,5 @@
-package chapter3;
+package chapter3.coffee;
 
-import static chapter3.Size.TALL;
 
 public class Espresso extends Beverage {
 

@@ -1,4 +1,4 @@
-package chapter3;
+package chapter3.coffee;
 
 public class HouseBlend extends Beverage {
 

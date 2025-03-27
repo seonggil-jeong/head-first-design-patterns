@@ -1,7 +1,7 @@
-package chapter3.decorator.impl;
+package chapter3.coffee.impl;
 
-import chapter3.Beverage;
-import chapter3.decorator.CondimentDecorator;
+import chapter3.coffee.Beverage;
+import chapter3.coffee.CondimentDecorator;
 
 public class Whip extends CondimentDecorator {
 

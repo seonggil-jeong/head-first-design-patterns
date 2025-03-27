@@ -1,10 +1,9 @@
-package chapter3.decorator.impl;
+package chapter3.coffee.impl;
 
 
-import chapter3.Beverage;
-import chapter3.decorator.CondimentDecorator;
-
-import static chapter3.Size.*;
+import chapter3.coffee.Beverage;
+import chapter3.coffee.CondimentDecorator;
+import chapter3.coffee.Size;
 
 public class Soy extends CondimentDecorator {
 
@@ -14,11 +13,11 @@ public class Soy extends CondimentDecorator {
 
     @Override
     public double cost() {
-        if (beverage.getSize() == TALL) {
+        if (beverage.getSize() == Size.TALL) {
             return beverage.cost() + .10;
-        } else if (beverage.getSize() == GRANDE) {
+        } else if (beverage.getSize() == Size.GRANDE) {
             return beverage.cost() + .15;
-        } else if (beverage.getSize() == VENTI) {
+        } else if (beverage.getSize() == Size.VENTI) {
             return beverage.cost() + .20;
         } else {
             return beverage.cost();
@@ -27,6 +26,6 @@ public class Soy extends CondimentDecorator {
 
     @Override
     public String getDescription() {
-        return null;
+        return beverage.getDescription() + ", Soy";
     }
 }
