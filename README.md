@@ -72,7 +72,7 @@ public interface PizzaIngredientFactory {
 
 ## Chapter6 - Command Pattern
 
-> 요청을 객체로 캡슐화하여 클라이언트로 하여금 서로 다른 요청, 큐, 로깅, 역순으로 요청을 수행할 수 있게 하는 패턴
+> 요청 내역을 객체로 캡슐화하여 클라이언트로 하여금 서로 다른 요청, 큐, 로깅, 역순으로 요청을 수행할 수 있게 하는 패턴
 
 - **Null Object**: 객체가 null인 경우, Null Object를 반환하여 NullPointException을 방지하는 패턴
 
