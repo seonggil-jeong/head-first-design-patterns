@@ -13,7 +13,6 @@ public class LightOffCommand implements Command {
 
     @Override
     public void execute() {
-        light.off();
-
+        System.out.println("Light is off");
     }
 }
