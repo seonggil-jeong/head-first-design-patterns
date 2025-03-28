@@ -70,3 +70,9 @@ public interface PizzaIngredientFactory {
 
 > 어떤 클래스가 최대 한 개의 인스턴스만을 갖도록 보장하고, 이 인스턴스에 전역 접근을 제공
 
+## Chapter6 - Command Pattern
+
+> 요청을 객체로 캡슐화하여 클라이언트로 하여금 서로 다른 요청, 큐, 로깅, 역순으로 요청을 수행할 수 있게 하는 패턴
+
+- **Null Object**: 객체가 null인 경우, Null Object를 반환하여 NullPointException을 방지하는 패턴
+
