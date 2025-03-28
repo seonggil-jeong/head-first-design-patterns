@@ -3,9 +3,12 @@ package chapter6.controller;
 import chapter6.command.Command;
 import chapter6.command.NoCommand;
 
+import java.util.Stack;
+
 public class RemoteControl {
     Command[] onCommands;
     Command[] offCommands;
+    Stack<Command> undoCommands = new Stack<>();
 
     public RemoteControl() {
         onCommands = new Command[7];
@@ -25,10 +28,12 @@ public class RemoteControl {
 
     public void onButtonWasPushed(int slot) {
         onCommands[slot].execute();
+        undoCommands.push(onCommands[slot]);
     }
 
     public void offButtonWasPushed(int slot) {
         offCommands[slot].execute();
+        undoCommands.push(offCommands[slot]);
     }
 
     @Override
@@ -40,5 +45,9 @@ public class RemoteControl {
                     + "    " + offCommands[i].getClass().getName() + "\n");
         }
         return stringBuff.toString();
+    }
+
+    public void undoButtonWasPushed() {
+        undoCommands.pop().undo();
     }
 }
