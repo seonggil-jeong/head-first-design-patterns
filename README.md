@@ -76,3 +76,7 @@ public interface PizzaIngredientFactory {
 
 - **Null Object**: 객체가 null인 경우, Null Object를 반환하여 NullPointException을 방지하는 패턴
 
+## Chapter7 - Adapter Pattern
+
+> 인터페이스 호환성 문제를 해결하기 위해, 기존의 인터페이스를 변환하여 새로운 인터페이스로 제공하는 패턴
+
