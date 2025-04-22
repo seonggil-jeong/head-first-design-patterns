@@ -1,6 +1,6 @@
-package chapter7.duck.impl;
+package chapter7.adapter.duck.impl;
 
-import chapter7.duck.Duck;
+import chapter7.adapter.duck.Duck;
 
 public class MallardDuck implements Duck {
 

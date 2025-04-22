@@ -1,4 +1,4 @@
-package chapter7.duck;
+package chapter7.adapter.duck;
 
 public interface Duck {
     void quack();

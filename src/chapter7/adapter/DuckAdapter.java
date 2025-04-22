@@ -1,7 +1,7 @@
 package chapter7.adapter;
 
-import chapter7.duck.Duck;
-import chapter7.turkey.Turkey;
+import chapter7.adapter.duck.Duck;
+import chapter7.adapter.turkey.Turkey;
 
 public class DuckAdapter implements Turkey {
     private final Duck duck;

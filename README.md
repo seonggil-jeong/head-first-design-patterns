@@ -80,3 +80,35 @@ public interface PizzaIngredientFactory {
 
 > 인터페이스 호환성 문제를 해결하기 위해, 기존의 인터페이스를 변환하여 새로운 인터페이스로 제공하는 패턴
 
+- 최소 지식 원칙 (Principle of Least Knowledge): 객체는 자신이 직접 알고 있는 객체와만 상호작용해야 한다. (Law of Demeter)
+  - 클래스 자기 자신의 메소드 또는 인스턴스 변수의 메소드
+  - 메소드의 파라미터로 보낸진 객체의 메소드
+  - 메소드 또는 인스턴스 변수가 직접 초기화 시킨 객체
+  - 호출을 위한 메소드 또는 속성으로서 같은 클래스 안에서 선언된 객체
+  - 전역 객체(싱글톤과 같은 객체 포함)
+
+```java
+class A {
+    private B b;
+    public setA(B b) {
+        b = b;
+    }
+    public myMethod(OtherObject other) {
+        // ...
+    }
+    /* 디미터의 법칙을 잘 따른 예 */
+    public okLawOfDemeter(Paramemter param) {
+        myMethod();     // 자신의 메소드
+        b.method();   // 자신의 멤버의 메소드
+        Local local = new Local();
+        local.method();    // 직접 생성한 객체의 메소드 
+        param.method();    // 메소드의 인자로 넘어온 메소드
+    }
+    /* 디미터의 법칙을 어긴 예 */
+    public violateLawOfDemeter(Paramemter param) {
+        C c = param.getC();
+        c.method();    // 인자로 받은 객체에서의 호출.
+        param.getC().method();      // 위와 같음.
+    }
+}
+```

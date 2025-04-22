@@ -1,6 +1,6 @@
-package chapter7.turkey.impl;
+package chapter7.adapter.turkey.impl;
 
-import chapter7.turkey.Turkey;
+import chapter7.adapter.turkey.Turkey;
 
 public class WildTurkey implements Turkey {
 

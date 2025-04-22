@@ -1,10 +1,9 @@
-package chapter7;
+package chapter7.adapter;
 
-import chapter7.duck.Duck;
-import chapter7.duck.impl.MallardDuck;
-import chapter7.turkey.Turkey;
-import chapter7.adapter.TurkeyAdapter;
-import chapter7.turkey.impl.WildTurkey;
+import chapter7.adapter.duck.Duck;
+import chapter7.adapter.duck.impl.MallardDuck;
+import chapter7.adapter.turkey.Turkey;
+import chapter7.adapter.turkey.impl.WildTurkey;
 
 public class DuckTestDrive {
 

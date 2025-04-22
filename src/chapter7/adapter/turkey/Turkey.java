@@ -1,4 +1,4 @@
-package chapter7.turkey;
+package chapter7.adapter.turkey;
 
 public interface Turkey {
     void gobble();
