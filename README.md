@@ -81,21 +81,24 @@ public interface PizzaIngredientFactory {
 > 인터페이스 호환성 문제를 해결하기 위해, 기존의 인터페이스를 변환하여 새로운 인터페이스로 제공하는 패턴
 
 - 최소 지식 원칙 (Principle of Least Knowledge): 객체는 자신이 직접 알고 있는 객체와만 상호작용해야 한다. (Law of Demeter)
-  - 클래스 자기 자신의 메소드 또는 인스턴스 변수의 메소드
-  - 메소드의 파라미터로 보낸진 객체의 메소드
-  - 메소드 또는 인스턴스 변수가 직접 초기화 시킨 객체
-  - 호출을 위한 메소드 또는 속성으로서 같은 클래스 안에서 선언된 객체
-  - 전역 객체(싱글톤과 같은 객체 포함)
+    - 클래스 자기 자신의 메소드 또는 인스턴스 변수의 메소드
+    - 메소드의 파라미터로 보낸진 객체의 메소드
+    - 메소드 또는 인스턴스 변수가 직접 초기화 시킨 객체
+    - 호출을 위한 메소드 또는 속성으로서 같은 클래스 안에서 선언된 객체
+    - 전역 객체(싱글톤과 같은 객체 포함)
 
 ```java
 class A {
     private B b;
+
     public setA(B b) {
         b = b;
     }
+
     public myMethod(OtherObject other) {
         // ...
     }
+
     /* 디미터의 법칙을 잘 따른 예 */
     public okLawOfDemeter(Paramemter param) {
         myMethod();     // 자신의 메소드
@@ -104,6 +107,7 @@ class A {
         local.method();    // 직접 생성한 객체의 메소드 
         param.method();    // 메소드의 인자로 넘어온 메소드
     }
+
     /* 디미터의 법칙을 어긴 예 */
     public violateLawOfDemeter(Paramemter param) {
         C c = param.getC();
@@ -112,3 +116,11 @@ class A {
     }
 }
 ```
+
+## Chapter8 - Template Method Pattern
+
+> 알고리즘의 구조를 정의하고, 서브클래스에서 구체적인 알고리즘을 구현하는 패턴
+
+Hook: 추상 클래스에서 선언되지만 기본적인 내용만 구현하며, 서브클래스에서 재정의하여 사용할 수 있는 메소드
+
+- 알고리즘 중간에 삽입되어 알고리즘의 흐름을 바꿀 수 있는 메소드
