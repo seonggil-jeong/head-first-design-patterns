@@ -1,4 +1,7 @@
-package chapter8;
+package chapter8.cafe;
+
+import chapter8.cafe.impl.CoffeeWithHook;
+import chapter8.cafe.impl.Tea;
 
 public class BeverageTestDrive {
 

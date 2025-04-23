@@ -1,21 +1,23 @@
-package chapter8;
+package chapter8.cafe.impl;
+
+import chapter8.cafe.CaffeineBeverageWithHook;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class CoffeeWithHook extends CaffeineBeverageWithHook {
     @Override
-    void brew() {
+    protected void brew() {
         System.out.println("Dripping Coffee through filter");
     }
 
     @Override
-    void addCondiments() {
+    protected void addCondiments() {
         System.out.println("Adding Sugar and Milk");
     }
 
     @Override
-    boolean customerWantsCondiments() {
+    protected boolean customerWantsCondiments() {
         return getUserInput().equals("yes");
     }
 

@@ -1,4 +1,6 @@
-package chapter8;
+package chapter8.cafe.impl;
+
+import chapter8.cafe.CaffeineBeverage;
 
 public class Coffee extends CaffeineBeverage {
 
@@ -11,12 +13,12 @@ public class Coffee extends CaffeineBeverage {
     }
 
     @Override
-    void brew() {
+    protected void brew() {
         System.out.println("Dripping coffee through filter");
     }
 
     @Override
-    void addCondiments() {
+    protected void addCondiments() {
         System.out.println("Adding Sugar and Milk");
     }
 }

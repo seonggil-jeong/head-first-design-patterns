@@ -1,8 +1,8 @@
-package chapter8;
+package chapter8.cafe;
 
 public abstract class CaffeineBeverageWithHook {
 
-    final void prepareRecipe() {
+    public final void prepareRecipe() {
         boilWater();
         brew();
         pourInCup();
@@ -13,9 +13,9 @@ public abstract class CaffeineBeverageWithHook {
         }
     }
 
-    abstract void brew();
+    protected abstract void brew();
 
-    abstract void addCondiments();
+    protected abstract void addCondiments();
 
     void boilWater() {
         System.out.println("Boiling water");
@@ -26,7 +26,7 @@ public abstract class CaffeineBeverageWithHook {
     }
 
     // This is a hook method
-    boolean customerWantsCondiments() {
+    protected boolean customerWantsCondiments() {
         return true;
     }
 

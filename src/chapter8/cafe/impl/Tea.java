@@ -1,4 +1,6 @@
-package chapter8;
+package chapter8.cafe.impl;
+
+import chapter8.cafe.CaffeineBeverage;
 
 public class Tea extends CaffeineBeverage {
 
@@ -11,12 +13,12 @@ public class Tea extends CaffeineBeverage {
     }
 
     @Override
-    void brew() {
+    protected void brew() {
         System.out.println("Steeping the tea");
     }
 
     @Override
-    void addCondiments() {
+    protected void addCondiments() {
 
         System.out.println("Adding Lemon");
     }

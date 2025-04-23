@@ -1,7 +1,7 @@
-package chapter8;
+package chapter8.cafe;
 
 public abstract class CaffeineBeverage {
-    final void prepareRecipe() {
+    public final void prepareRecipe() {
         boilWater();
         brew();
         pourInCup();
@@ -16,8 +16,8 @@ public abstract class CaffeineBeverage {
         System.out.println("Pouring into cup");
     }
 
-    abstract void brew();
+    protected abstract void brew();
 
-    abstract void addCondiments();
+    protected abstract void addCondiments();
 
 }
