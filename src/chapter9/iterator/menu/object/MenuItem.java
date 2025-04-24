@@ -1,4 +1,4 @@
-package chapter9.iterator.menu;
+package chapter9.iterator.menu.object;
 
 public class MenuItem {
     String name;

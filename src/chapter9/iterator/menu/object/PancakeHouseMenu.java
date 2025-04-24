@@ -1,11 +1,13 @@
-package chapter9.iterator.menu;
+package chapter9.iterator.menu.object;
 
-import chapter9.iterator.menu.iterator.Iterator;
+import chapter9.iterator.menu.Menu;
 import chapter9.iterator.menu.iterator.impl.PancakeHouseIterator;
+import chapter9.iterator.menu.object.MenuItem;
 
+import java.util.Iterator;
 import java.util.List;
 
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu {
     List<MenuItem> menuItems;
 
     public PancakeHouseMenu() {
@@ -21,7 +23,7 @@ public class PancakeHouseMenu {
         menuItems.add(new MenuItem(name, description, vegetarian, price));
     }
 
-    public Iterator createIterator() {
+    public Iterator<MenuItem> createIterator() {
         return new PancakeHouseIterator(menuItems);
     }
 }

@@ -1,9 +1,12 @@
-package chapter9.iterator.menu;
+package chapter9.iterator.menu.object;
 
-import chapter9.iterator.menu.iterator.Iterator;
+import chapter9.iterator.menu.Menu;
 import chapter9.iterator.menu.iterator.impl.DinerMenuIterator;
+import chapter9.iterator.menu.object.MenuItem;
 
-public class DinerMenu {
+import java.util.Iterator;
+
+public class DinerMenu implements Menu {
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
@@ -29,7 +32,7 @@ public class DinerMenu {
         }
     }
 
-    public Iterator createIterator() {
+    public Iterator<MenuItem> createIterator() {
         return new DinerMenuIterator(menuItems);
     }
 }

@@ -1,11 +1,11 @@
 package chapter9.iterator.menu.iterator.impl;
 
-import chapter9.iterator.menu.MenuItem;
-import chapter9.iterator.menu.iterator.Iterator;
+import chapter9.iterator.menu.object.MenuItem;
 
+import java.util.Iterator;
 import java.util.List;
 
-public class PancakeHouseIterator implements Iterator {
+public class PancakeHouseIterator implements Iterator<MenuItem> {
     private final List<MenuItem> items;
     private int position = 0;
 
@@ -24,5 +24,10 @@ public class PancakeHouseIterator implements Iterator {
         MenuItem menuItem = items.get(position);
         position++;
         return menuItem;
+    }
+
+    @Override
+    public void remove() {
+        throw new UnsupportedOperationException("cannot remove menu item");
     }
 }
