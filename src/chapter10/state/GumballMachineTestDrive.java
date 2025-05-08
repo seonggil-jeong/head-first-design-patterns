@@ -3,7 +3,7 @@ package chapter10.state;
 public class GumballMachineTestDrive {
 
     public static void main(String[] args) {
-        GumballMachine gumballMachine = new GumballMachine(5);
+        GumballMachine gumballMachine = new GumballMachine("location", 5);
 
         System.out.println(gumballMachine);
 

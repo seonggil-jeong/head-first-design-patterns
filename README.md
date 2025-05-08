@@ -142,11 +142,9 @@ CaffeineBeverage: 음료를 만드는 방법에 해당하는 알고리즘을 장
 
 Coffee, Tea: 메소드를 구현하고 제공하는 용도로 사용됨, 호출 전까지 추상 클래스를 직접 호출하지 않음
 
-
 ## Chapter9 - Iterator Pattern
 
 > 컬렉션 객체의 내부 구조를 노출하지 않고, 컬렉션 객체에 접근할 수 있는 방법을 제공하는 패턴
-
 
 ## Chapter9 - Composite Pattern
 
@@ -157,11 +155,9 @@ Coffee, Tea: 메소드를 구현하고 제공하는 용도로 사용됨, 호출 
 
 > **투명성**: Component 인터페이스에 자식들을 관리하는 기능과 Leaf Node의 기능을 전부 넣어 똑같은 방식으로 처리할 수 있도록 만듬
 
-
 ## Chapter10 - State Pattern
 
 > 객체 내부 상태가 바뀜에 따라서 객체의 행동을 바꿀 수 있는 패턴
-
 
 ### DIFF State Pattern vs Strategy Pattern
 
@@ -179,4 +175,10 @@ Coffee, Tea: 메소드를 구현하고 제공하는 용도로 사용됨, 호출 
 - 실행 시에 전략 객체를 변경할 수 있는 유연성을 제공
 
 서브클래스를 만드는 방법 대신해서 유연성을 극대화하는 용도로 사용
+
+## Chapter11 - Proxy Pattern
+
+> 특정 객체로의 접근을 제아하는 대리인(특정 객체를 대변하는 객체)을 제공
+
+- 동적 프록시(Dynamic proxy): 진짜 프록시 클래스는 실행 중에 생성됨
 
