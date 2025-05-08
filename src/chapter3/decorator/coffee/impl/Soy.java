@@ -1,9 +1,9 @@
-package chapter3.coffee.impl;
+package chapter3.decorator.coffee.impl;
 
 
-import chapter3.coffee.Beverage;
-import chapter3.coffee.CondimentDecorator;
-import chapter3.coffee.Size;
+import chapter3.decorator.coffee.Beverage;
+import chapter3.decorator.coffee.CondimentDecorator;
+import chapter3.decorator.coffee.Size;
 
 public class Soy extends CondimentDecorator {
 

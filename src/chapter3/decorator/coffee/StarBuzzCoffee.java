@@ -1,10 +1,10 @@
-package chapter3.coffee;
+package chapter3.decorator.coffee;
 
-import chapter3.coffee.impl.Mocha;
-import chapter3.coffee.impl.Soy;
-import chapter3.coffee.impl.Whip;
+import chapter3.decorator.coffee.impl.Mocha;
+import chapter3.decorator.coffee.impl.Soy;
+import chapter3.decorator.coffee.impl.Whip;
 
-import static chapter3.coffee.Size.GRANDE;
+import static chapter3.decorator.coffee.Size.GRANDE;
 
 public class StarBuzzCoffee {
 

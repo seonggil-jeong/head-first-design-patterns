@@ -1,4 +1,4 @@
-package chapter3.coffee;
+package chapter3.decorator.coffee;
 
 public enum Size {
     TALL,

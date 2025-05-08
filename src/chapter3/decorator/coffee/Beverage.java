@@ -1,8 +1,11 @@
-package chapter3.coffee;
+package chapter3.decorator.coffee;
+
+
+import static chapter3.decorator.coffee.Size.TALL;
 
 public abstract class Beverage {
     String description = "Unknown Beverage";
-    Size size = Size.TALL;
+    chapter3.decorator.coffee.Size size = TALL;
 
 
     public Size getSize() {
